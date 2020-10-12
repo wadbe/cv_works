@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #343353;
+  --color-primary: #f16777 ;
   --color-secondary: rgba(233, 47, 69, 0.937);
   --color-terciary: #ffd15c;
   --color-fourth: rgba(219, 109, 121, 0.938);
@@ -9,8 +9,12 @@
   --color-font: #6b6464;
   --color-shadow: rgba(69, 67, 96, 0.1);
   --color-green: #189b4a;
-  --color-yellow: #ffd15c;
   --color-pink: #e27b87;
+  --color-lila: #9594b8;
+  --color-naranja: #ff8000;
+  --color-celeste: #6b9fbd;
+  --color-gris: #8e8b8b;
+  --color-amarillo: #F0DB4F;
 }
 
 /* ESTILOS GENERALES */
@@ -28,7 +32,7 @@ body {
 
 .title-content {
   font-size: 38px;
-  color: var(-color-f);
+  color: var(--color-fourth);
   text-align: left;
 }
 
@@ -307,17 +311,27 @@ img {
 
 .skills-container__main__card__progress__content:nth-child(1) .skills-container__main__card__progress__content__bar__incomplete {
   width: 90%;
-  background-color: var(--color-green);
+  background-color: var(--color-naranja);
 }
 
 .skills-container__main__card__progress__content:nth-child(2) .skills-container__main__card__progress__content__bar__incomplete {
   width: 50%;
-  background-color: var(--color-pink);
+  background-color: var(--color-celeste);
 }
 
 .skills-container__main__card__progress__content:nth-child(3) .skills-container__main__card__progress__content__bar__incomplete {
   width: 10%;
-  background-color: var(--color-yellow);
+  background-color: var(--color-gris);
+}
+
+.skills-container__main__card__progress__content:nth-child(4) .skills-container__main__card__progress__content__bar__incomplete {
+  width: 25%;
+  background-color: var(--color-lila);
+}
+
+.skills-container__main__card__progress__content:nth-child(5) .skills-container__main__card__progress__content__bar__incomplete {
+  width: 1%;
+  background-color: var(--color-amarillo);
 }
 
 /*SERVICES*/
@@ -335,7 +349,19 @@ img {
   justify-content: space-between;
 }
 
-.services-container__topics__card, .works-container__topics__card {
+.services-container__topics {
+  margin-bottom: 20px;
+}
+
+.services-container__topics__card:hover, 
+.services-container__topics__card__dos:hover {
+  transition-duration: 500ms;
+  opacity: 1;
+  cursor: pointer;
+  
+}
+
+.services-container__topics__card, .services-container__topics__card__dos, .works-container__topics__card {
   width: 30%;
   padding: 30px;
   border-radius: 20px;
@@ -345,21 +371,42 @@ img {
   box-sizing: border-box;
 }
 
+.servicio {
+  font-size: 90px;
+}
+.services-container__topics__card, .services-container__topics__card__dos {
+  opacity: 0.4;
+}
+
+
+
 .services-container__topics__card:nth-child(1) {
-  background-color: var(--color-green);
-  box-shadow: 0px 5px 20px 0px var(--color-green);
+  background-color: var(--color-naranja);
+  box-shadow: 0px 5px 20px 0px var(--color-naranja);
 }
 
 .services-container__topics__card:nth-child(2) {
-  background-color: var(--color-pink);
-  box-shadow: 0px 5px 20px 0px var(--color-pink);
+  background-color: var(--color-celeste);
+  box-shadow: 0px 5px 20px 0px var(--color-celeste);
 }
 
 .services-container__topics__card:nth-child(3) {
-  background-color: var(--color-yellow);
-  box-shadow: 0px 5px 20px 0px var(--color-yellow);
-  color: var(--color-font);
+  background-color: var(--color-gris);
+  box-shadow: 0px 5px 20px 0px var(--color-gris);
 }
+
+.services-container__topics__card__dos:nth-child(1) {
+  background-color: var(--color-lila);
+  box-shadow: 0px 5px 20px 0px var(--color-lila);
+}
+
+.services-container__topics__card__dos:nth-child(2) {
+  background-color: var(--color-amarillo);
+  box-shadow: 0px 5px 20px 0px var(--color-amarillo);
+  color: #000000d7;
+}
+
+
 
 /*EXPERIENCE*/
 
@@ -533,6 +580,7 @@ img {
   max-height: 200px;
   min-width: 100%;
   max-width: 100%;
+  resize: none;
 }
 
 .contactme-container__main__form__name>label>input::placeholder, .contactme-container__main__form__comment>textarea::placeholder {
@@ -635,7 +683,7 @@ footer {
   .services-container__topics {
     flex-wrap: wrap;
   }
-  .services-container__topics__card {
+  .services-container__topics__card, .services-container__topics__card__dos {
     width: 100%;
     margin: auto;
     margin-bottom: 20px;
@@ -659,13 +707,13 @@ footer {
   .contactme-container__main__text {
     width: 100%;
   }
-  .contactme-container__main{
+  .contactme-container__main {
     flex-direction: column;
   }
-  .contactme-container__main__form{
+  .contactme-container__main__form {
     width: 100%;
   }
-  .contactme-container__main__form__name{
+  .contactme-container__main__form__name {
     display: flex;
     flex-direction: column;
   }
@@ -678,5 +726,4 @@ footer {
   footer {
     padding: 0 10px;
   }
-
 }
