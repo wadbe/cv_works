@@ -177,8 +177,8 @@ img {
 }
 
 .banner-container__main__avatar {
-  height: 108px;
-  width: 108px;
+  height: 200px;
+  width: 200px;
   margin-bottom: 24px;
 }
 
@@ -282,7 +282,9 @@ img {
 
 .skills-container__main__card__progress__content {
   margin-bottom: 20px;
+  
 }
+
 
 .skills-container__main__card__progress__content:last-child {
   margin-bottom: 0px;
@@ -301,6 +303,7 @@ img {
   box-shadow: none;
   overflow: hidden;
   position: relative;
+
 }
 
 .skills-container__main__card__progress__content__bar__incomplete {
@@ -333,6 +336,21 @@ img {
   width: 1%;
   background-color: var(--color-amarillo);
 }
+
+@keyframes progreso {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 100%;
+  }
+}
+.skills-container__main__card__progress__content {
+  animation: progreso 3s linear;
+  -webkit-animation: progreso 3s linear;
+}
+
+
 
 /*SERVICES*/
 
